@@ -3474,6 +3474,10 @@ select {
   word-break: break-all;
 }
 
+.w-0 {
+  width: 0px;
+}
+
 .w-5 {
   width: 1.25rem;
 }
@@ -3874,6 +3878,10 @@ select {
 
   .md\:w-64 {
     width: 16rem;
+  }
+
+  .md\:w-3\/12 {
+    width: 25%;
   }
 
   .md\:w-4\/12 {
