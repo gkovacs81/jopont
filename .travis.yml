@@ -1,0 +1,29 @@
+sudo: required
+addons:
+  chrome: stable
+
+language: node_js
+node_js:
+  - "10"
+
+branches:
+  only:
+    - master
+
+before_script:
+  - npm install -g @angular/cli
+
+script:
+  - ng build --prod --output-path dist/prod
+
+deploy:
+  provider: pages
+  local-dir: dist/prod
+  skip-cleanup: true
+  github-token: $GITHUB_TOKEN
+  keep-history: true
+  on:
+    branch: master
+  repo: jopont/jopont
+  target_branch: gh-pages
+  #fqdn: www.arpi-security.info
