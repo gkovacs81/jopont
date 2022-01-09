@@ -5,6 +5,8 @@ import { Component, OnInit } from "@angular/core";
   templateUrl: "./landing.component.html",
 })
 export class LandingComponent implements OnInit {
+  date = new Date().getFullYear();
+
   constructor() {}
 
   ngOnInit(): void {}
